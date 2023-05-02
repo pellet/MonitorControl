@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1246,11 +1246,11 @@
                             <scrollView focusRingType="none" borderType="none" horizontalLineScroll="520" horizontalPageScroll="10" verticalLineScroll="520" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="O0W-8R-9c8">
                                 <rect key="frame" x="0.0" y="30" width="730" height="502"/>
                                 <clipView key="contentView" drawsBackground="NO" id="yDV-Al-LQT">
-                                    <rect key="frame" x="0.0" y="0.0" width="730" height="502"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="719" height="502"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" tableStyle="inset" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="520" viewBased="YES" id="zC9-dS-Tr3">
-                                            <rect key="frame" x="0.0" y="0.0" width="740" height="520"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="729" height="502"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="14" height="0.0"/>
                                             <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1933,7 +1933,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="zbU-d8-F8n">
-                                    <rect key="frame" x="716" y="0.0" width="14" height="502"/>
+                                    <rect key="frame" x="719" y="0.0" width="11" height="502"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -2122,7 +2122,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="NSApplicationIcon" id="ftw-y4-OLS"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zz2-ed-nlQ">
-                                <rect key="frame" x="22" y="439" width="686" height="31"/>
+                                <rect key="frame" x="22" y="435" width="686" height="35"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Welcome to MonitorControl" id="5J0-BD-top">
                                     <font key="font" textStyle="largeTitle" name=".SFNS-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2130,7 +2130,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="i4H-Xi-qQ9">
-                                <rect key="frame" x="22" y="397" width="686" height="32"/>
+                                <rect key="frame" x="22" y="389" width="686" height="36"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" id="Mh5-1A-apq">
                                     <font key="font" textStyle="body" name=".SFNS-Regular"/>
                                     <string key="title">Control your external displays brightness, contrast and volume directly from your Mac, using menulet sliders or the keyboard, including native Apple keys.</string>
@@ -2139,7 +2139,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cRo-Y4-wGw">
-                                <rect key="frame" x="24" y="343" width="40" height="40"/>
+                                <rect key="frame" x="24" y="335" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="B24-Kq-eYp"/>
                                     <constraint firstAttribute="width" constant="40" id="uoQ-As-avq"/>
@@ -2148,7 +2148,7 @@
                                 <color key="contentTintColor" name="AccentColor"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XOg-4t-Y46">
-                                <rect key="frame" x="70" y="356" width="115" height="21"/>
+                                <rect key="frame" x="70" y="346" width="115" height="23"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Start at Login?" id="bA1-GF-Y2n">
                                     <font key="font" textStyle="title2" name=".SFNS-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2156,7 +2156,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="2Mx-eg-r9b">
-                                <rect key="frame" x="70" y="330" width="550" height="16"/>
+                                <rect key="frame" x="70" y="318" width="550" height="18"/>
                                 <textFieldCell key="cell" selectable="YES" title="Ensure MonitorControl is always running when you need it by launching the app at startup." id="nk6-Gh-Mfs">
                                     <font key="font" textStyle="body" name=".SFNS-Regular"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -2164,7 +2164,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XWw-qf-xqA">
-                                <rect key="frame" x="70" y="303" width="203" height="18"/>
+                                <rect key="frame" x="70" y="290" width="203" height="18"/>
                                 <buttonCell key="cell" type="check" title="Start MonitorControl at Login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="JWJ-OY-VtE">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" textStyle="body" name=".SFNS-Regular"/>
@@ -2174,14 +2174,14 @@
                                 </connections>
                             </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="smN-BX-6Bx">
-                                <rect key="frame" x="25" y="190" width="680" height="94"/>
+                                <rect key="frame" x="25" y="176" width="680" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="zbt-AP-TbB"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="onboarding_keyboard" id="msN-VA-JCl"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2CX-gU-Z8v">
-                                <rect key="frame" x="78" y="261" width="85" height="13"/>
+                                <rect key="frame" x="78" y="246" width="85" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Brightness down" id="q5a-Ix-Hjs">
                                     <font key="font" textStyle="caption1" name=".SFNS-Regular"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -2189,7 +2189,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ow8-dR-Fgo">
-                                <rect key="frame" x="165" y="261" width="71" height="13"/>
+                                <rect key="frame" x="165" y="246" width="71" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Brightness up" id="nty-g6-Sde">
                                     <font key="font" textStyle="caption1" name=".SFNS-Regular"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -2197,7 +2197,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vcj-wy-xpT">
-                                <rect key="frame" x="467" y="261" width="64" height="13"/>
+                                <rect key="frame" x="467" y="246" width="64" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Toggle Mute" id="jK7-7w-uib">
                                     <font key="font" textStyle="caption1" name=".SFNS-Regular"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -2205,7 +2205,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C46-iS-x7A">
-                                <rect key="frame" x="531" y="261" width="69" height="13"/>
+                                <rect key="frame" x="531" y="246" width="69" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Volume down" id="21s-bv-GTK">
                                     <font key="font" textStyle="caption1" name=".SFNS-Regular"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -2213,7 +2213,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9HD-qV-iYX">
-                                <rect key="frame" x="602" y="261" width="55" height="13"/>
+                                <rect key="frame" x="602" y="246" width="55" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Volume up" id="Z3w-eR-qDF">
                                     <font key="font" textStyle="caption1" name=".SFNS-Regular"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -2221,7 +2221,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VAj-Uw-KLP">
-                                <rect key="frame" x="24" y="140" width="40" height="40"/>
+                                <rect key="frame" x="24" y="126" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="XUV-vo-BpM"/>
                                     <constraint firstAttribute="width" constant="40" id="k0E-63-grt"/>
@@ -2230,7 +2230,7 @@
                                 <color key="contentTintColor" name="AccentColor"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ex9-0r-ZMv">
-                                <rect key="frame" x="70" y="153" width="317" height="21"/>
+                                <rect key="frame" x="70" y="137" width="317" height="23"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Enable Apple keyboard native key access" id="RBj-pU-aen">
                                     <font key="font" textStyle="title2" name=".SFNS-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2238,7 +2238,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="GSh-nh-adY">
-                                <rect key="frame" x="70" y="111" width="637" height="32"/>
+                                <rect key="frame" x="70" y="91" width="637" height="36"/>
                                 <textFieldCell key="cell" selectable="YES" id="kBJ-Zf-1k2">
                                     <font key="font" textStyle="body" name=".SFNS-Regular"/>
                                     <string key="title">MonitorControl needs access to "accessibility" to use macOS native keys to control your display.
@@ -2248,7 +2248,7 @@ You can enable it by adding MonitorControl in System Preferences &gt; Security a
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j2w-H2-9zU">
-                                <rect key="frame" x="65" y="74" width="202" height="32"/>
+                                <rect key="frame" x="65" y="54" width="202" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open System Preferences…" bezelStyle="rounded" imagePosition="trailing" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pVc-wG-Bdh">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -2333,7 +2333,7 @@ DQ
     </scenes>
     <resources>
         <image name="NSApplicationIcon" width="32" height="32"/>
-        <image name="NSTouchBarIconViewTemplate" width="15" height="14"/>
+        <image name="NSTouchBarIconViewTemplate" width="19" height="18"/>
         <image name="onboarding_icon_keyboard" width="40" height="40"/>
         <image name="onboarding_icon_person" width="40" height="40"/>
         <image name="onboarding_keyboard" width="680" height="94"/>

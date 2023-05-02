@@ -7,6 +7,8 @@ class MenuHandler: NSMenu, NSMenuDelegate {
   var combinedSliderHandler: [Command: SliderHandler] = [:]
 
   var lastMenuRelevantDisplayId: CGDirectDisplayID = 0
+  
+  var oscBen: OSCBen!
 
   func clearMenu() {
     var items: [NSMenuItem] = []
@@ -177,6 +179,15 @@ class MenuHandler: NSMenu, NSMenuDelegate {
       let title = NSLocalizedString("Brightness", comment: "Shown in menu")
       addedSliderHandlers.append(self.setupMenuSliderHandler(command: .brightness, display: display, title: title))
     }
+    func setSlider(value: Float) {
+      let sliderHandler = display.sliderHandler[.brightness]!
+      let slider = sliderHandler.slider!
+      
+      slider.cell!.floatValue = value
+      slider.floatValue = value
+      sliderHandler.valueChanged(slider: slider)
+    }
+    self.oscBen = OSCBen(setSlider: setSlider)
     if prefs.integer(forKey: PrefKey.multiSliders.rawValue) != MultiSliders.combine.rawValue {
       self.addDisplayMenuBlock(addedSliderHandlers: addedSliderHandlers, blockName: display.readPrefAsString(key: .friendlyName) != "" ? display.readPrefAsString(key: .friendlyName) : display.name, monitorSubMenu: monitorSubMenu, numOfDisplays: numOfDisplays, asSubMenu: asSubMenu)
     }
