@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		28D1DDF2227FBE71004CB494 /* NSScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1DDF1227FBE71004CB494 /* NSScreen+Extension.swift */; };
 		28D1DDF3227FC8C6004CB494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56754EB01D9A4016007BCDC5 /* Assets.xcassets */; };
-		4040A59E29F7E5E3001CB0C3 /* SwiftOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4040A59D29F7E5E3001CB0C3 /* SwiftOSC.framework */; };
 		4040A5A029FFADBB001CB0C3 /* OSCBen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040A59F29FFADBB001CB0C3 /* OSCBen.swift */; };
+		40B1301B2A02930600DFF1B9 /* SwiftOSC in Frameworks */ = {isa = PBXBuildFile; productRef = 40B1301A2A02930600DFF1B9 /* SwiftOSC */; };
 		56754EAF1D9A4016007BCDC5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56754EAE1D9A4016007BCDC5 /* main.swift */; };
 		56754EB11D9A4016007BCDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56754EB01D9A4016007BCDC5 /* Assets.xcassets */; };
 		6C85EFDA22C941B000227EA1 /* DisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C85EFD922C941B000227EA1 /* DisplayManager.swift */; };
@@ -84,7 +84,6 @@
 		2FBCCED52853930200C06A13 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		2FBCCED62853930200C06A13 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InternetAccessPolicy.strings; sourceTree = "<group>"; };
 		2FBCCED72853930200C06A13 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4040A59D29F7E5E3001CB0C3 /* SwiftOSC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftOSC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4040A59F29FFADBB001CB0C3 /* OSCBen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCBen.swift; sourceTree = "<group>"; };
 		56754EAB1D9A4016007BCDC5 /* MonitorControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonitorControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56754EAE1D9A4016007BCDC5 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = main.swift; sourceTree = "<group>"; };
@@ -180,7 +179,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4040A59E29F7E5E3001CB0C3 /* SwiftOSC.framework in Frameworks */,
 				AA9AE87126B5BFB700B6CA65 /* CoreDisplay.framework in Frameworks */,
 				AA70817C27046B9800CC5625 /* Sparkle in Frameworks */,
 				AA44E703270377C200E06865 /* KeyboardShortcuts in Frameworks */,
@@ -188,6 +186,7 @@
 				6CD35F5626500008001F1344 /* MediaKeyTap in Frameworks */,
 				AA9AE86F26B5BF3D00B6CA65 /* OSD.framework in Frameworks */,
 				6CD35F5C2650003F001F1344 /* Preferences in Frameworks */,
+				40B1301B2A02930600DFF1B9 /* SwiftOSC in Frameworks */,
 				AADB625A26BC196900DFFAA5 /* DisplayServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +204,6 @@
 		28D1DDD1227FB759004CB494 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4040A59D29F7E5E3001CB0C3 /* SwiftOSC.framework */,
 				AA9AE86E26B5BF3D00B6CA65 /* OSD.framework */,
 				AA9AE87026B5BFB700B6CA65 /* CoreDisplay.framework */,
 				AADB625926BC196900DFFAA5 /* DisplayServices.framework */,
@@ -392,6 +390,7 @@
 				6CD35F5B2650003F001F1344 /* Preferences */,
 				AA44E702270377C200E06865 /* KeyboardShortcuts */,
 				AA70817B27046B9800CC5625 /* Sparkle */,
+				40B1301A2A02930600DFF1B9 /* SwiftOSC */,
 			);
 			productName = MonitorControl.OSX;
 			productReference = 56754EAB1D9A4016007BCDC5 /* MonitorControl.app */;
@@ -467,6 +466,7 @@
 				6CD35F5A2650003F001F1344 /* XCRemoteSwiftPackageReference "Preferences" */,
 				AA44E701270377C200E06865 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 				AA70817A27046B9800CC5625 /* XCRemoteSwiftPackageReference "Sparkle" */,
+				40B130192A02930600DFF1B9 /* XCRemoteSwiftPackageReference "SwiftOSC" */,
 			);
 			productRefGroup = 56754EAC1D9A4016007BCDC5 /* Products */;
 			projectDirPath = "";
@@ -991,6 +991,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		40B130192A02930600DFF1B9 /* XCRemoteSwiftPackageReference "SwiftOSC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/barksten/SwiftOSC";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		6CD35F51264FFFC6001F1344 /* XCRemoteSwiftPackageReference "SimplyCoreAudio" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rnine/SimplyCoreAudio";
@@ -1034,6 +1042,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		40B1301A2A02930600DFF1B9 /* SwiftOSC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40B130192A02930600DFF1B9 /* XCRemoteSwiftPackageReference "SwiftOSC" */;
+			productName = SwiftOSC;
+		};
 		6CD35F52264FFFC6001F1344 /* SimplyCoreAudio */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6CD35F51264FFFC6001F1344 /* XCRemoteSwiftPackageReference "SimplyCoreAudio" */;
