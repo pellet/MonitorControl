@@ -8,8 +8,8 @@ class MenuHandler: NSMenu, NSMenuDelegate {
 
   var lastMenuRelevantDisplayId: CGDirectDisplayID = 0
   
-  var oscBen: OSCBen!
-
+  public var oscServer: OSCReceiver!
+  
   func clearMenu() {
     var items: [NSMenuItem] = []
     for i in 0 ..< self.items.count {
@@ -187,7 +187,8 @@ class MenuHandler: NSMenu, NSMenuDelegate {
       slider.floatValue = value
       sliderHandler.valueChanged(slider: slider)
     }
-    self.oscBen = OSCBen(setSlider: setSlider)
+    self.oscServer.setSlider = setSlider
+    
     if prefs.integer(forKey: PrefKey.multiSliders.rawValue) != MultiSliders.combine.rawValue {
       self.addDisplayMenuBlock(addedSliderHandlers: addedSliderHandlers, blockName: display.readPrefAsString(key: .friendlyName) != "" ? display.readPrefAsString(key: .friendlyName) : display.name, monitorSubMenu: monitorSubMenu, numOfDisplays: numOfDisplays, asSubMenu: asSubMenu)
     }

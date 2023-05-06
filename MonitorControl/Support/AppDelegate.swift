@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var startupActionWriteCounter: Int = 0
   var audioPlayer: AVAudioPlayer?
   let updaterController = SPUStandardUpdaterController(startingUpdater: false, updaterDelegate: UpdaterDelegate(), userDriverDelegate: nil)
+  var oscServer: OSCReceiver!
 
   var preferencePaneStyle: Preferences.Style {
     if !DEBUG_MACOS10, #available(macOS 11.0, *) {
@@ -331,6 +332,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   private func setMenu() {
     menu = MenuHandler()
+    self.oscServer = OSCReceiver()
+    menu.oscServer = self.oscServer
     menu.delegate = menu
     self.statusItem.button?.image = NSImage(named: "status")
     self.statusItem.menu = menu
