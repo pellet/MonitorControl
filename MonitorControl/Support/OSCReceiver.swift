@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftOSC
+import AudioToolbox
 
 class OSCReceiver: OSCServerDelegate
 {
@@ -24,6 +25,49 @@ class OSCReceiver: OSCServerDelegate
     self.server.start()
     print("created osc server")
   }
+  
+  func setVol(vol: Float32) {
+    var defaultOutputDeviceID = AudioDeviceID(0)
+    var defaultOutputDeviceIDSize = UInt32(MemoryLayout.size(ofValue: defaultOutputDeviceID))
+
+    var getDefaultOutputDevicePropertyAddress = AudioObjectPropertyAddress(
+        mSelector: kAudioHardwarePropertyDefaultOutputDevice,
+        mScope: kAudioObjectPropertyScopeGlobal,
+        mElement: AudioObjectPropertyElement(kAudioObjectPropertyElementMaster))
+
+    let status1 = AudioObjectGetPropertyData(
+        AudioObjectID(kAudioObjectSystemObject),
+        &getDefaultOutputDevicePropertyAddress,
+        0,
+        nil,
+        &defaultOutputDeviceIDSize,
+        &defaultOutputDeviceID)
+
+    var volume = vol//Float32(0.50) // 0.0 ... 1.0
+    var volumeSize = UInt32(MemoryLayout.size(ofValue: volume))
+
+    var volumePropertyAddress = AudioObjectPropertyAddress(
+      mSelector: kAudioHardwareServiceDeviceProperty_VirtualMainVolume,
+        mScope: kAudioDevicePropertyScopeOutput,
+        mElement: kAudioObjectPropertyElementMaster)
+
+    let status2 = AudioObjectSetPropertyData(
+        defaultOutputDeviceID,
+        &volumePropertyAddress,
+        0,
+        nil,
+        volumeSize,
+        &volume)
+    
+    volume = Float32(0.0)
+    let status3 = AudioObjectGetPropertyData(
+        defaultOutputDeviceID,
+        &volumePropertyAddress,
+        0,
+        nil,
+        &volumeSize,
+        &volume)
+  }
     
   func didReceive(_ message: OSCMessage){
     if let integer = message.arguments[0] as? Int {
@@ -32,11 +76,18 @@ class OSCReceiver: OSCServerDelegate
       let accuracy = Float(100)
       let rounded = round(float*accuracy)
       if rounded != self.last {
-        print("setting display to: \(rounded/accuracy)%")
+        
         self.last = rounded
         DispatchQueue.main.async {
-          _ = self.setSlider?(rounded/accuracy/100)
+          let setty = rounded/accuracy/100
+          print("setting display to: \(setty)")
+          _ = self.setSlider?(setty)
+                
+          print("setting volume to: \(setty)")
+          self.setVol(vol: setty)
         }
+        
+        
       }
     
     }
