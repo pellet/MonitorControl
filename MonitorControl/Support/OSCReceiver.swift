@@ -78,15 +78,14 @@ class OSCReceiver: OSCServerDelegate
       if rounded != self.last {
         
         self.last = rounded
-        DispatchQueue.main.async {
-          let setty = rounded/accuracy/100
-          print("setting display to: \(setty)")
-          _ = self.setSlider?(setty)
-                
-          print("setting volume to: \(setty)")
-          self.setVol(vol: setty)
-        }
         
+        let setty = (rounded/accuracy/100)*0.95+0.05
+        print("setting display to: \(setty)")
+        _ = self.setSlider?(setty)
+        
+        let vol = (rounded/accuracy/100)
+        print("setting volume to: \(vol)")
+        self.setVol(vol: vol)
         
       }
     
